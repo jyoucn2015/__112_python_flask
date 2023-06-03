@@ -29,6 +29,7 @@ st.dataframe(mask_dataFrame)
 
 option = st.selectbox(
     '行政區域',
-    (areas))
+    (areas
+     ))
 
 st.write('You selected:', option)
