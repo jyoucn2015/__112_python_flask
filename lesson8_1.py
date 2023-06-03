@@ -12,6 +12,13 @@ else:
     print(f"連線失敗:{response.status_code}")
 
 dataFrame = pd.DataFrame(data=all_data,columns=['sna','tot','sbi','sarea','mday','ar','bemp','act'])
+#min = int(input("請輸入要查詢的可借數量:"))
+#mask = dataFrame['sbi'] <= min
+#mask_dataFrame = dataFrame[mask]
+#mask_dataFrame.to_csv('可借小於3的站點.csv')
+#filename = f'可借小於{min}的站點.xlsx'
+#mask_dataFrame.to_excel(filename)
+
 mask = dataFrame['sbi'] <= 3
 mask_dataFrame = dataFrame[mask]
 st.dataframe(mask_dataFrame)
