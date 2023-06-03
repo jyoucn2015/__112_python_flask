@@ -11,8 +11,6 @@ if response.status_code == 200:
 else:
     print(f"連線失敗:{response.status_code}")
 
-
-
 dataFrame = pd.DataFrame(data=all_data,columns=['sna','tot','sbi','sarea','mday','ar','bemp','act'])
 mask = dataFrame['sbi'] <= 3
 mask_dataFrame = dataFrame[mask]
