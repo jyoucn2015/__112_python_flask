@@ -37,4 +37,4 @@ dataFrame2 = dataFrame1[mask]
 
 #st.write('You selected:', option)
 st.write(option,":",len(dataFrame2.index))
-st.dataFrame(dataFrame2)
+st.dataframe(dataFrame2)
